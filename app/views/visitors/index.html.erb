@@ -1,0 +1,29 @@
+<div class="splash">
+	<div class="signin-container">
+		<div class="heading"> <h2>Test App</h2></div>
+		<div class="form-section">
+			<div class="row">
+				<div class="col-md-12">
+					<%= form_tag upload_url_path, remote:true do %>
+			  			<div class="form-group">
+			    			<%= label_tag :url %>
+			    			<%= text_field_tag :url,nil, placeholder: "www.google.com", class: "form-control" %>
+			  			</div>
+			  			<%= button_tag :submit , class: "hide"%>
+					<% end %>
+				</div>	
+			</div>
+
+			<div class="row">
+				<div class="col-md-12">
+					<div id="url_section">
+						<%= render partial: 'visitors/url', locals: {urls: @urls} %>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+

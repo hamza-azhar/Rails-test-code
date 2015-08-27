@@ -1,0 +1,20 @@
+.splash {
+	padding: 55px 0;
+	.signin-container {
+		max-width: 500px;
+		margin: 0 auto;
+		background-color: #fff;
+		.heading {
+			background-color: #333;
+			text-align: center;
+			h2 {
+				color: #fff;
+				line-height: 50px;
+			}
+		}
+		.form-section {
+			padding: 15px;
+		}
+
+	}
+}
