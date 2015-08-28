@@ -8,10 +8,9 @@ class VisitorsController < ApplicationController
 	end
 
 	def upload_url
-		binding.pry
 		if valid_url?(params[:url]) == 0
 			@url = Url.new
-			param_url = params[:url].match(/^http:\/\//) ? "#{params[:url]}" : "http:// + #{params[:url]}"
+			param_url = params[:url].match(/^http:\/\//) ? "#{params[:url]}" : "http://#{params[:url]}"
 			@url.test_url = URI.parse("#{param_url}").host
 			@url.save
 		end
