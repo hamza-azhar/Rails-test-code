@@ -16,7 +16,7 @@ group :development do
 end
 gem 'bootstrap-sass'
 gem 'figaro', '>= 1.0.0.rc1'
-gem 'mysql2'
+gem 'pg'
 gem 'therubyracer', :platform=>:ruby
 group :development do
   gem 'better_errors'
