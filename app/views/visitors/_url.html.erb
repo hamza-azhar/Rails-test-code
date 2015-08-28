@@ -1,11 +1,5 @@
-<table class="table table-bordered">
-	<tbody>
-		<% urls.each do |url| %>
-  		<tr>
-			<td><%= url.test_url %></td>
-  		</tr>
+<ul>
+	<% urls.each do |url| %>
+			<li><%= url.test_url %></li>
 		<% end %>
-
-  
-	</tbody>
-</table>
+</ul>
