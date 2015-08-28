@@ -11,7 +11,11 @@ class VisitorsController < ApplicationController
 		if valid_url?(params[:url]) == 0
 			@url = Url.new
 			param_url = params[:url].match(/^http:\/\//) ? "#{params[:url]}" : "http://#{params[:url]}"
-			@url.test_url = URI.parse("#{param_url}").host
+			binding.pry
+			
+			parsed_url = URI.parse("#{param_url}").host
+			@url.test_url = parsed_url.gsub('www.', '') if parsed_url.match("www")
+
 			@url.save
 		end
 		@urls = Url.order(created_at: :desc)
