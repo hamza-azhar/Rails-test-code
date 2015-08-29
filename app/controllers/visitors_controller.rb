@@ -11,7 +11,7 @@ class VisitorsController < ApplicationController
 			@url = Url.new
 			param_url = params[:url].match(/^http:\/\//) ? "#{params[:url]}" : "http://#{params[:url]}"
 			parsed_url = URI.parse("#{param_url}").host if param_url.present?
-			@url.test_url = parsed_url.gsub(/^www\./, '') if parsed_url.match(/^www\./) if parsed_url.present?
+			@url.test_url = parsed_url.gsub(/^www\./, '') if parsed_url.present?
 
 			@url.save
 		end
